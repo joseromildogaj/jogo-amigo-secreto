@@ -25,3 +25,9 @@ function limparEntrada() {
     entrada.focus();
 }
 
+function validarEntrada(entrada) {
+    const regex = /^[a-zA-Z\u00C0-\u017F]+(?:\s[a-zA-Z\u00C0-\u017F]+)*$/;
+    return (entrada === '' || !regex.test(entrada)) ? false : true;
+}
+
+
