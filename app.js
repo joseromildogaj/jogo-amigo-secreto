@@ -3,6 +3,12 @@ let amigos = [];
 function adicionarAmigo() {
     let entrada = lerEntrada();
     limparEntrada();
+    if (!validarEntrada(entrada)) {
+        alert('Por favor, insira um nome válido.');
+        return;
+    }
+    amigos.push(entrada);
+
 }
 
 function sortearAmigo() {
@@ -29,5 +35,16 @@ function validarEntrada(entrada) {
     const regex = /^[a-zA-Z\u00C0-\u017F]+(?:\s[a-zA-Z\u00C0-\u017F]+)*$/;
     return (entrada === '' || !regex.test(entrada)) ? false : true;
 }
+
+function limparLista(tag) {
+    const lista = document.getElementById(tag);
+    if (lista.length != 0) {
+        lista.innerHTML = '';
+    }
+}
+
+
+
+
 
 
