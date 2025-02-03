@@ -19,6 +19,11 @@ function sortearAmigo() {
         limparLista('resultado');
         return;
     }
+    const amigoSorteado = realizarSorteio();
+    const resultado = document.getElementById('resultado');
+    limparLista('listaAmigos');
+    resultado.innerHTML = `O amigo secreto sorteado é: ${amigoSorteado}`;
+    amigos = [];
 }
 
 //----------------- Funções Auxiliares -----------------
@@ -57,6 +62,12 @@ function atualizarListaAmigos() {
         amigo.innerHTML = amigos[index];
         listaAmigos.appendChild(amigo);
     }
+}
+
+function realizarSorteio() {
+    const indice = Math.floor(Math.random() * amigos.length);
+    const amigoSorteado = amigos[indice];
+    return amigoSorteado;
 }
 
 
