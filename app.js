@@ -13,7 +13,12 @@ function adicionarAmigo() {
 }
 
 function sortearAmigo() {
-
+    if (amigos.length == 0) {
+        alert('Por favor, adicione amigos antes de sortear.');
+        limparEntrada();
+        limparLista('resultado');
+        return;
+    }
 }
 
 //----------------- Funções Auxiliares -----------------
