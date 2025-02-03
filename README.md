@@ -16,6 +16,9 @@ Os nomes inseridos serão exibidos em uma lista visível na página, e ao finali
 - *Visualizar a lista:* Os nomes inseridos aparecerão em uma lista abaixo do campo de entrada.
 - *Sorteio aleatório:* Ao clicar no botão "Sortear Amigo", um nome da lista será selecionado aleatoriamente e exibido na página.
 
+## Deploy da Aplicação
+https://jogo-amigo-secreto-iota.vercel.app/
+
 ## Tecnologias Utilizadas
 - HTML5
 - CSS3
