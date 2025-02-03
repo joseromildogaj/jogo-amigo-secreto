@@ -8,6 +8,7 @@ function adicionarAmigo() {
         return;
     }
     amigos.push(entrada);
+    atualizarListaAmigos();
 
 }
 
@@ -40,6 +41,16 @@ function limparLista(tag) {
     const lista = document.getElementById(tag);
     if (lista.length != 0) {
         lista.innerHTML = '';
+    }
+}
+
+function atualizarListaAmigos() {
+    const listaAmigos = document.getElementById('listaAmigos');
+    limparLista('listaAmigos');
+    for (let index = 0; index < amigos.length; index++) {
+        let amigo = document.createElement('li');
+        amigo.innerHTML = amigos[index];
+        listaAmigos.appendChild(amigo);
     }
 }
 
